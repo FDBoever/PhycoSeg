@@ -1,6 +1,10 @@
 # PhycoSeg
 A UNet-based pipeline for quantitative algal morphology
 
+![Workflow overview](assets/hulls_centered_with_scale_solidity.png)
+
+![Workflow overview](assets/morphometrics_shematic.png)
+
 
 ## Install
 
