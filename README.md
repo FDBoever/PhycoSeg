@@ -26,6 +26,14 @@ pip install numpy==1.26.4 opencv-python pillow tqdm matplotlib
 
 ## Usage
 
+Organize your dataset as follows
+
+```bash
+./data/ 
+├── images/    # input images (e.g. .jpeg, .png) 
+└── masks/     # binary masks with same filenames (foreground = white, background = black) 
+```
+
 Train the UNET model on training dataset (images and respective masks)
 
 ```bash
@@ -48,3 +56,13 @@ python unet-palmaria.py infer \
 ```
 
 
+You can expand a small dataset with synthetic variations
+
+```bash
+python augment-images.py  
+  --images ./data/images  
+  --masks ./data/masks  
+  --out_images ./data/aug_images  
+  --out_masks ./data/aug_masks  
+  --num 10 
+```
