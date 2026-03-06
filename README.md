@@ -44,6 +44,11 @@ python unet-palmaria.py train \
   --no_save
 ```
 
+Options: 
+-epochs: number of training epochs 
+-batch_size: batch size (adjust for GPU memory) 
+-outdir: where to save logs and checkpoints 
+    
 Predict/Infer objects using the trained model 
 
 ```bash
@@ -54,6 +59,10 @@ python unet-palmaria.py infer \
   --threshold 0.5 \
   --save_overlay
 ```
+
+Options: 
+-ckpt: path to trained model checkpoint 
+-threshold: probability cutoff for binarisation (default 0.5) 
 
 
 You can expand a small dataset with synthetic variations
